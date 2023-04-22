@@ -1,0 +1,21 @@
+.membership__container{
+    display: flex;
+    margin: auto;
+    padding: 100px 0;
+    margin: 0 195px;
+    margin: 0 14%;
+}
+.membership__img__container{
+    max-width: 50%;
+    max-height: 275px;
+    max-width: 50%;
+    min-height: 275px;
+    padding: 0px 37px;
+}
+.membership__img{
+    object-fit: cover;
+    object-position: 54.386% 0%;
+}
+.membership__article{
+    width: 50%;
+}
