@@ -1,0 +1,20 @@
+.team__with__cup__container{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    height: 100vh;
+    background-image: url("../images/team_with_cup.webp");
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 12%;
+    min-height: 800px;
+}
+.team__with__cup__lion__h1{font-size: 90px;}
+.team__with__cup__lion__p{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+}

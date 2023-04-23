@@ -1,3 +1,6 @@
 @import "header.css";
 @import "global.css";
-@import "membership.css"
+@import "membership.css";
+@import "membership__price.css";
+@import "membership__order__form.css";
+@import "team__with__cup.css";

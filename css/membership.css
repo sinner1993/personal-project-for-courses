@@ -1,21 +1,39 @@
 .membership__container{
+    padding: 100px 30px;
+    width: 100%;
+}
+.membership__wrapper{
     display: flex;
-    margin: auto;
-    padding: 100px 0;
-    margin: 0 195px;
-    margin: 0 14%;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1150px;
+    gap: 20px;
 }
-.membership__img__container{
-    max-width: 50%;
-    max-height: 275px;
-    max-width: 50%;
-    min-height: 275px;
-    padding: 0px 37px;
-}
+
 .membership__img{
     object-fit: cover;
     object-position: 54.386% 0%;
+    width: 575px;
+    height: 275px;
 }
 .membership__article{
-    width: 50%;
+    width: 100%;
+    white-space: break-spaces;
+    min-width: 575px;
+    padding-right: 20px;
 }
+.membership__h1{
+    font-size: 42px;
+    font-weight: 400;
+}
+.membership__hr{
+    width: 59px;
+    border-bottom: 1px ridge lightgray;
+    height: 1px;
+}
+.membership__p{
+    line-height: 26px;
+    font-weight: 400;
+}
+
