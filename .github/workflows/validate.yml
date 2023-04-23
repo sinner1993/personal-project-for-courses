@@ -25,13 +25,11 @@ jobs:
       run: |
         [ -f package.json ] && npm ci || npm init -y
         npm install puppeteer http-server
-
     - name: Serve files and render dynamic HTML using Puppeteer
       run: |
         npx http-server -p 8080 &
         SERVER_PID=$!
         sleep 5
-
         for file in $(find . -maxdepth 1 -iname "*.html" ! -iname "*.partial.html"); do
           echo "Processing file: ${file:2}"
           output_file="$(basename $file .html).rendered.html"
@@ -50,9 +48,7 @@ jobs:
             process.exit(1);
           });"
         done
-
         kill $SERVER_PID
-
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -65,9 +61,4 @@ jobs:
       run: |
         for file in $(find . -maxdepth 1 -iname "*.rendered.html"); do
           htmlproofer $file --disable-external
-        done
-  
-      run: |
-        for file in $(find . -maxdepth 1 -iname "*.rendered.html"); do
-          htmlproofer $file --disable-internal
         done
