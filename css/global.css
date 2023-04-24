@@ -8,17 +8,20 @@
 :root {
     --main-background-color: white;
     --header-text-colour: #fff;
-    --ui-dark-accent-color: #505155;                                        /*Text color*/
+    --ui-dark-accent-color: #505155;
+    /*Text color*/
     --ui-strong-dark-color: #515558;
     --ui-dark-shade-color: #232428;
     --ui-text-color-light: #fff;
     --ui-block-title-color-light: #fff;
-    --spots-text-color: rgba(255,255,255,0.6);
-    --places-text-menu-color: #232428;                                      /*Places block text menu color*/
-    --main-title: rgba(255,255,255,0.6);
-    --main-title_without_picture: #6f7380;                                  /*For title without picture in background*/
+    --spots-text-color: rgba(255, 255, 255, 0.6);
+    --places-text-menu-color: #232428;
+    /*Places block text menu color*/
+    --main-title: rgba(255, 255, 255, 0.6);
+    --main-title_without_picture: #6f7380;
+    /*For title without picture in background*/
     --color-book-now-button: rgba(20, 139, 238);
-    --divider: rgb(238,46,20);
+    --divider: rgb(238, 46, 20);
     --tour-icons: #14a9ee;
     --ui-caption-color-light: #a9a9a9;
     --background-icon-color: rgba(255, 255, 255, 0.05);
@@ -28,13 +31,14 @@
 
 body {
     display: block;
-    min-width: 320px;                                                           /*It taken from original web site*/
+    min-width: 320px;
+    /*It taken from original web site*/
 }
 
 img {
     display: block;
-     width: 100%; 
-     height: 100%; 
+    width: 100%;
+    height: 100%;
 }
 
 .container {

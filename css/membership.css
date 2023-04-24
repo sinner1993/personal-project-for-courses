@@ -1,8 +1,9 @@
-.membership__container{
+.membership__container {
     padding: 100px 30px;
     width: 100%;
 }
-.membership__wrapper{
+
+.membership__wrapper {
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -11,29 +12,32 @@
     gap: 20px;
 }
 
-.membership__img{
+.membership__img {
     object-fit: cover;
     object-position: 54.386% 0%;
-    width: 575px;
-    height: 275px;
+    /* width: 575px; */
+    /* height: 275px; */
 }
-.membership__article{
+
+.membership__article {
     width: 100%;
     white-space: break-spaces;
     min-width: 575px;
     padding-right: 20px;
 }
-.membership__h1{
+
+.membership__h1 {
     font-size: 42px;
     font-weight: 400;
 }
-.membership__hr{
+
+.membership__hr {
     width: 59px;
     border-bottom: 1px ridge lightgray;
     height: 1px;
 }
-.membership__p{
+
+.membership__p {
     line-height: 26px;
     font-weight: 400;
 }
-

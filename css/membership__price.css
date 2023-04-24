@@ -1,4 +1,4 @@
-.membership__columns__container{
+.membership__columns__container {
     grid-template-columns: 1fr 1fr 1fr;
     display: grid;
     justify-items: center;
@@ -13,30 +13,37 @@
     padding: 100px 5px;
 }
 
-.membership__columns__wrapper{
+.membership__columns__wrapper {
     width: 100%;
     background-color: white;
     padding: 80px 20px;
 }
-.membershit__column__h2{
+
+.membershit__column__h2 {
     margin-top: 10px;
     font-size: 25px;
 }
-.ball, .stadium, .medal{
+
+.ball,
+.stadium,
+.medal {
     width: 70px;
     height: 70px;
     margin-top: 15px;
 }
-.membershit__column__price{
+
+.membershit__column__price {
     margin-top: 20px;
     font-size: 34px;
 }
-.membershit__column__duration{
+
+.membershit__column__duration {
     margin-top: 5px;
     font-size: 14px;
     margin-bottom: 40px;
 }
-.membershit__column__button__wrapper{
+
+.membershit__column__button__wrapper {
     margin-top: 38px;
     background-color: #14a9ee;
     width: 118px;
@@ -45,9 +52,11 @@
     display: grid;
     align-content: center;
 }
-.mebership__price__section{
+
+.mebership__price__section {
     background-color: lightgray;
 }
-.membershit__column__button{
+
+.membershit__column__button {
     text-decoration: none;
 }
