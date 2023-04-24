@@ -60,6 +60,6 @@ jobs:
     - name: Run HTML Proofer
       run: |
         for file in $(find . -maxdepth 1 -iname "*.rendered.html"); do
-          htmlproofer $file --disable-external; do
-          htmlproofer $file --disable-external
+          htmlproofer $file --disable-external; 
+          htmlproofer $file --disable-internal;
         done
