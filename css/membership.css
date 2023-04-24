@@ -13,10 +13,15 @@
 }
 
 .membership__img {
-    object-fit: cover;
-    object-position: 54.386% 0%;
+    object-fit: initial;
+    object-position: 117.386% -48%;
     /* width: 575px; */
     /* height: 275px; */
+    /* min-height: 460px; */
+    /* min-width: 570px; */
+    height: 100;
+    height: 100%;
+    width: 100%;
 }
 
 .membership__article {
