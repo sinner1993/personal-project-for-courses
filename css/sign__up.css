@@ -1,0 +1,68 @@
+
+.sign__up__container{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/sign__up__grass__img.webp);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.sign__up__background__wrapper {
+    z-index: 31;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.sign__up__wrapper {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sign__up__h2 {
+    font-size: 42px;
+    color: white;
+}
+
+.sign__up__h2::after {
+    content: "";
+    display: flex;
+    width: 61px;
+    height: 1px;
+    position: absolute;
+    border-bottom: 1px ridge #ffffff;
+    bottom: 60%;
+    left: 41%;
+    z-index: 7;
+}
+
+.back__ground__wrapper{position: absolute;filter: brightness(83%);width: 100%;height: inherit;background-color: rgba(20, 139, 238);opacity: 0.97;margin: 10px 0;}
+
+.sign__up__form__wrapper{margin-top: 12px;width: 100%;}
+.sign__up__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20;
+    gap: 20px;
+}
+.sign__up__input{
+    height: 45px;
+    padding-left: 20px;
+}
+.sign__up__form__button{
+    height: 45px;
+    background-color: red;
+    color: white;
+    border: none;
+    outline: none;
+    transition: 300ms ease-in-out;
+}
+.sign__up__form__button:hover{
+    cursor: pointer;
+    background-color: darkred;
+}

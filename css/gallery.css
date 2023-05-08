@@ -1,25 +1,28 @@
 
-.staff__and__coaches__background__wrapper {
+.gallery__background__wrapper {
     padding: 90px 0;
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
 }
 
-.staff__and__coaches__wrapper {
+.gallery__wrapper {
     display: grid;
     justify-content: center;
     text-align: center;
 }
+.gallery__h2__wrapper{
+    display: block;
+}
 
-.staff__and__coaches__h2 {
+.gallery__h2 {
     font-size: 42px;
     margin-bottom: 90px;
     position: relative;
     margin-top: 90px;
 }
 
-.staff__and__coaches__h2::after {
+.gallery__h2::after {
     content: "";
     display: flex;
     width: 61px;
@@ -31,35 +34,36 @@
     z-index: 5;
 }
 
-.staff__and__coaches__wrapper {
+.gallery__wrapper {
     max-width: 1170px;
     margin: 0 auto;
     width: 100%;
+    /* display: flex; */
 }
 
-.staff__and__coaches__p {
+.gallery__p {
     font-size: 20px;
     letter-spacing: 0.4px;
     font-weight: 500;
     margin-bottom: 60px;
 }
 
-.staff__and__coaches__column {
+.gallery__column {
     background-color: white;
-    padding: 40px 36px;
     text-align: center;
+    padding: 0;
 }
-.staff__and__coaches__column__h2 {
+.gallery__column__h2 {
     margin-bottom: 18px;
 }
 
-.staff__and__coaches__img__wrapper{
+.gallery__img__wrapper{
 
 max-width: 370px;
 
 max-height: 278px;
 }
-.staff__and__coaches__columns__wrapper{
+.gallery__columns__wrapper{
     display: flex;
     align-items: baseline;
     text-align: -webkit-right;

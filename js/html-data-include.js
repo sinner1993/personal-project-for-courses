@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const jsScriptsLoading = () => {
+        const event = new CustomEvent("partialsLoaded");
+            document.dispatchEvent(event);
+    } 
     document
         .querySelectorAll("[data-include]")
         .forEach(element => {
@@ -13,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
                 .then(html => {
                     element.outerHTML = html;
+                    jsScriptsLoading()
                 })
                 .catch(error => {
                     console.error("Error including file:", error);

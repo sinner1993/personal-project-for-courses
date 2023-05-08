@@ -1,0 +1,121 @@
+
+.events__wrapper {
+    padding: 30px 0 90px 0px;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.events__background__wrapper{
+    background-image: url(../images/events__stadium.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+.events__h2 {
+    font-size: 42px;
+    margin-bottom: 78px;
+    position: relative;
+    margin-top: 12px;
+    color: white;
+}
+
+.events__h2::after {
+    content: "";
+    display: flex;
+    width: 61px;
+    height: 1px;
+    position: absolute;
+    border-bottom: 1px ridge red;
+    bottom: -50%;
+    left: 46%;
+    z-index: 5;
+}
+
+.events__p {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    color: white;
+    font-weight: 400;
+    position: relative;
+}
+
+.events__rows__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+    background-color: black;
+    opacity: 0.6;
+    border-bottom: 1px ridge cornflowerblue;
+    color: white;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.events__row__events__wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    padding: 0 0 0 101px;
+}
+.events__row__date__wrapper{
+    display: block;
+    width: 100;
+    justify-content: start;
+    padding-left: 30px;
+    font-weight: 600;
+}
+.events__row__events__wrapper{
+    width: 100%;
+    padding: 0px 0 0 160px;
+}
+.events__ row__time__hepening__wrapper{
+    width: 100%;
+}
+.events__ row__time__hepening__wrapper{
+    width: 100%;
+}
+.events__row__date{
+    
+font-size: 55px;
+}
+.events_row__month{
+    
+font-size: 14px;
+}
+.events__row__events{
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 1.2px;
+}
+.events__row__events__info{
+    
+font-size: 14px;
+}
+.events__row__time__hepening__wrapper{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.events__row__hepening__date{
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.events__row__hepening__time{
+    
+font-size: 14px;
+}
+.events__backgrond__opacity__wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+.events__rows__none__border{
+    border: none;
+}
+.event__p{
+    color: white}
