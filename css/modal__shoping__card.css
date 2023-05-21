@@ -1,0 +1,237 @@
+.modal__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    position: fixed;
+    z-index: 40;
+    width: 100%;
+    overflow-y: scroll;
+    visibility: hidden;
+}
+
+.modal__form__wrapper {
+    z-index: 42;
+    background-color: white;
+    opacity: 1.0;
+    /* overflow: scroll; */
+    width: 450px;
+    /* height: 400px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
+}
+
+.modal__back__ground__opacity {
+    height: 100vh;
+    position: fixed;
+    /* justify-content: center; */
+    display: flex;
+    background-color: black;
+    opacity: 0.70;
+    display: flex;
+    width: -webkit-fill-available;
+}
+
+.modal__form {
+    padding: 10px;
+    display: block;
+}
+
+.modal__form__inputs__item__manager {
+    padding: 20px 40px;
+}
+
+.moda__form__header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.modal__form__button__first__line {
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    transform-origin: bottom;
+    transform: rotate(45deg);
+    transform-origin: 9px;
+    top: 52%;
+    left: 23%;
+    position: absolute;
+}
+
+.modal__form__button__second__line {
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    transform-origin: center;
+    transform: rotate(-45deg);
+}
+
+.modal__nortification__close__button, .modal__form__close__button {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.modal__nortification__close__button, .modal__form__close__button:hover {
+    cursor: pointer;
+}
+
+.modal__form__name {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.modal__form__name__inputs__name {
+    font-size: 11px;
+    padding: 0px 40px;
+    margin-top: 24px;
+}
+
+.modal__form__inputs__products__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.modal__form__inputs__img__wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modal__form__name__inputs__quantity {
+    width: 20%;
+    margin-left: 10px;
+    height: 25px;
+}
+
+.modal__form__name__inputs__quantity[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+.modal__form__inputs__total__price {
+    text-align: end;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+.modal__form__inputs__place__p {
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.modal__form__inputs__h4__span {
+    color: red;
+}
+
+.modal__form__inputs__h4__name {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.modal__form__inputs__all {
+    height: 40px;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 17px;
+    background-color: lightgray;
+    letter-spacing: 0.2px;
+    border: none;
+}
+
+.modal__form__inputs__comment {
+    width: 100%;
+    height: 112px;
+    padding-left: 20px;
+    background-color: lightgray;
+    letter-spacing: 0.2px;
+    border: none;
+    font-size: 17px;
+    text-align: initial;
+    display: flex;
+    padding-bottom: 60px;
+}
+
+.modal__form__inputs__button {
+    width: 76px;
+    height: 35px;
+    margin-top: 20px;
+    background: red;
+    border: none;
+    color: white;
+    font-size: 17px;
+    transition: 300ms ease-in-out;
+}
+
+.modal__form__inputs__button:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+
+.modal__form__inputs__button__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.modal__card__li {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.modal__card__li__p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 76px;
+}
+
+.modal__list__item__input {
+    width: 40px;
+    height: 23px;
+}
+
+.modal__list__item__input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+.delete__modal__list__item:hover {
+    cursor: pointer;
+}
+
+.modal__nortification {
+    display: none;
+    visibility: hidden;
+    height: 400px;
+    /* align-items: center; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.modal__close__button {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.nortification__p__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
