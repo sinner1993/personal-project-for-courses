@@ -88,6 +88,17 @@ const modalFormNortification = document.querySelector(".modal__nortification");
 const cartSelector = document.querySelector(".shoping__card__back__ground");
 const closeEmptyCart = document.querySelector(".modal__nortification__close__button");
 
+const toFixedFunc = (reducer) => {
+const totalSelector = document.querySelector(".modal__form__inputs__total__price");
+const toFixedTotalPrice = reducer.toFixed(2).replace(/(?<=\.\d{2})\d+/).replace(".", ",");
+totalSelector.innerHTML = `$${toFixedTotalPrice}USD`;
+}  
+
+const totalFunc = (arr)=> {
+const reducer = arr.reduce((acu, current)=> acu + current.price, 0);
+toFixedFunc(reducer)
+}
+
 const template = (el) => {
     const liModal = document.createElement("li");
     const liImg = document.createElement("img");
@@ -104,7 +115,9 @@ const template = (el) => {
     liImg.setAttribute("src", el.img);
     liName.innerHTML = el.name;
     liSpan.appendChild(iModal);
+    liPrice.setAttribute("class", "modal__li__price")
     liInputNumber.setAttribute("type", "number");
+    
     liInputNumber.setAttribute("value", el.value);
     iModal.setAttribute("class","bi bi-trash3");
     iModal.setAttribute("data-id", `${el.productCode}`);
@@ -123,6 +136,7 @@ const addLiItem = (foundItemTemplate) => {
     arrOrderedItems.forEach(el => {
         el.productCode === foundItemTemplate.productCode ? template(el) : el;
     })
+    totalFunc(arrOrderedItems)
 }
 const quantityItems = () => {
     const root = document.querySelector(":root");
@@ -161,6 +175,34 @@ const deleteLiItem = () => {
 }
 
 
+const increseValue = () => {
+const inputAll = document.querySelectorAll(".modal__form__name__inputs__quantity");
+const inputArr = Array.from(inputAll);
+inputArr.forEach(el=>{
+ el.addEventListener("click", (event)=> {
+   let id = event.target.parentNode.id;
+   const parent = document.getElementById(id);
+   const input = parent.querySelector(".modal__form__name__inputs__quantity")
+   let value  = el.value;
+   const price = parent.querySelector(".modal__li__price");
+   if(value >= 1){
+   arrOrderedItems.forEach((item) => {
+    if (item.productCode === id) {
+      let foundItemTemplate = Object.assign({}, SHOPPING__PRODUCTS.find((el) => el.productCode === id));
+      item.price = foundItemTemplate.price * value;
+      let fixedPrice = item.price.toFixed(2).replace(/(?<=\.\d{2})\d+/, "").replace(".", ",");
+      price.innerHTML = `$${fixedPrice}USD`;
+    }
+  });
+}
+else{
+    input.stepDown(-1);
+}
+}) ;
+});
+};
+
+
 closeEmptyCart.addEventListener("click",()=>{
     const closeModalContainer = document.querySelector(".modal__container");
     closeModalContainer.style.visibility = "hidden";
@@ -182,12 +224,21 @@ closeModalCard.addEventListener("click", () => {
 })
 
 const addTheSameItem = (foundItemTemplate, idShopButton) => {
+    const parentPrice = document.getElementById(idShopButton);
+    const price = parentPrice.querySelector(".modal__li__price");
+    const input = parentPrice.querySelector(".modal__form__name__inputs__quantity");
     arrOrderedItems.forEach(el => {
         el.productCode == idShopButton ? el.value += 1 : el
     })
     arrOrderedItems.forEach(el => {
-        el.productCode == idShopButton ? el.price = foundItemTemplate.price * el.value : el;
+        if(el.productCode == idShopButton){
+         el.price = foundItemTemplate.price * el.value ;
+        const priceFixed = el.price.toFixed(2).replace(/(<=\.\d{2})\d+/,"").replace(".", ",");
+        price.innerHTML = `$${priceFixed}USD`;
+        input.value = el.value;
+        }
     })
+
 }
 
 const addItemToModalCard = () => {
@@ -201,6 +252,7 @@ const addItemToModalCard = () => {
             makeModalListVisible.style.visibility = "visible";
             quantityItems();
             deleteLiItem();
+            increseValue();
         })
     }
     )
