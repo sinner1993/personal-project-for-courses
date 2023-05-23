@@ -87,16 +87,18 @@ const modaFormWrapper = document.querySelector(".modal__form");
 const modalFormNortification = document.querySelector(".modal__nortification");
 const cartSelector = document.querySelector(".shoping__card__back__ground");
 const closeEmptyCart = document.querySelector(".modal__nortification__close__button");
+const madalFormOpacityBackGround =  document.querySelector(".modal__back__ground__opacity");
+
 
 const toFixedFunc = (reducer) => {
-const totalSelector = document.querySelector(".modal__form__inputs__total__price");
-const toFixedTotalPrice = reducer.toFixed(2).replace(/(?<=\.\d{2})\d+/).replace(".", ",");
-totalSelector.innerHTML = `$${toFixedTotalPrice}USD`;
-}  
+    const totalSelector = document.querySelector(".modal__form__inputs__total__price");
+    const toFixedTotalPrice = reducer.toFixed(2).replace(/(?<=\.\d{2})\d+/).replace(".", ",");
+    totalSelector.innerHTML = `$${toFixedTotalPrice}USD`;
+}
 
-const totalFunc = (arr)=> {
-const reducer = arr.reduce((acu, current)=> acu + current.price, 0);
-toFixedFunc(reducer)
+const totalFunc = (arr) => {
+    const reducer = arr.reduce((acu, current) => acu + current.price, 0);
+    toFixedFunc(reducer)
 }
 
 const template = (el) => {
@@ -117,9 +119,9 @@ const template = (el) => {
     liSpan.appendChild(iModal);
     liPrice.setAttribute("class", "modal__li__price")
     liInputNumber.setAttribute("type", "number");
-    
+
     liInputNumber.setAttribute("value", el.value);
-    iModal.setAttribute("class","bi bi-trash3");
+    iModal.setAttribute("class", "bi bi-trash3");
     iModal.setAttribute("data-id", `${el.productCode}`);
     const fixedPrice = el.price.toFixed(2).replace(/(?<=\.\d{2})\d+/).replace(".", ",");
     liPrice.innerHTML = `$${fixedPrice}USD`;
@@ -130,6 +132,8 @@ const template = (el) => {
     liModal.appendChild(liSpan);
     ulModal.appendChild(liModal);
 }
+
+
 
 const addLiItem = (foundItemTemplate) => {
     arrOrderedItems.push(foundItemTemplate);
@@ -143,8 +147,8 @@ const quantityItems = () => {
     const sumOfAllItems = arrOrderedItems.reduce((acu, current) => acu + current.value, 0)
     sumOfAllItems <= 9 ? root.style.setProperty("--counter", `"${sumOfAllItems}"`) : root.style.setProperty("--counter", `"9+"`)
 }
-const emptyModal = () =>{
-    const  emptyModalCard = ()=> { 
+const emptyModal = () => {
+    const emptyModalCard = () => {
         modaFormWrapper.style.display = "none";
         modalFormNortification.style.display = "block";
         modalFormNortification.style.visibility = "visible";
@@ -163,47 +167,50 @@ const deleteLiItem = () => {
         el.addEventListener("click", (event) => {
             let idItem = event.target.getAttribute('data-id');
             let firstIndex = arrOrderedItems.findIndex(el => el.productCode == idItem);
-            if(firstIndex !== -1){
-            arrOrderedItems.splice(firstIndex, 1);
-            const deleteLi = document.getElementById(idItem);
-            ulModal.removeChild(deleteLi)
-            quantityItems()
-            emptyModal()
+            if (firstIndex !== -1) {
+                arrOrderedItems.splice(firstIndex, 1);
+                const deleteLi = document.getElementById(idItem);
+                ulModal.removeChild(deleteLi)
+                quantityItems()
+                emptyModal()
             }
+            totalFunc(arrOrderedItems)
         })
+
     })
 }
 
 
 const increseValue = () => {
-const inputAll = document.querySelectorAll(".modal__form__name__inputs__quantity");
-const inputArr = Array.from(inputAll);
-inputArr.forEach(el=>{
- el.addEventListener("click", (event)=> {
-   let id = event.target.parentNode.id;
-   const parent = document.getElementById(id);
-   const input = parent.querySelector(".modal__form__name__inputs__quantity")
-   let value  = el.value;
-   const price = parent.querySelector(".modal__li__price");
-   if(value >= 1){
-   arrOrderedItems.forEach((item) => {
-    if (item.productCode === id) {
-      let foundItemTemplate = Object.assign({}, SHOPPING__PRODUCTS.find((el) => el.productCode === id));
-      item.price = foundItemTemplate.price * value;
-      let fixedPrice = item.price.toFixed(2).replace(/(?<=\.\d{2})\d+/, "").replace(".", ",");
-      price.innerHTML = `$${fixedPrice}USD`;
-    }
-  });
-}
-else{
-    input.stepDown(-1);
-}
-}) ;
-});
+    const inputAll = document.querySelectorAll(".modal__form__name__inputs__quantity");
+    const inputArr = Array.from(inputAll);
+    inputArr.forEach(el => {
+        el.addEventListener("click", (event) => {
+            let id = event.target.parentNode.id;
+            const parent = document.getElementById(id);
+            const input = parent.querySelector(".modal__form__name__inputs__quantity")
+            let value = el.value;
+            const price = parent.querySelector(".modal__li__price");
+            if (value >= 1) {
+                arrOrderedItems.forEach((item) => {
+                    if (item.productCode === id) {
+                        let foundItemTemplate = Object.assign({}, SHOPPING__PRODUCTS.find((el) => el.productCode === id));
+                        item.price = foundItemTemplate.price * value;
+                        let fixedPrice = item.price.toFixed(2).replace(/(?<=\.\d{2})\d+/, "").replace(".", ",");
+                        price.innerHTML = `$${fixedPrice}USD`;
+                    }
+                    totalFunc(arrOrderedItems)
+                });
+            }
+            else {
+                input.stepDown(-1);
+            }
+        });
+    });
 };
 
 
-closeEmptyCart.addEventListener("click",()=>{
+closeEmptyCart.addEventListener("click", () => {
     const closeModalContainer = document.querySelector(".modal__container");
     closeModalContainer.style.visibility = "hidden";
     closeModalContainer.style.display = "none";
@@ -212,15 +219,16 @@ closeEmptyCart.addEventListener("click",()=>{
 makeModalListVisible.addEventListener("click", () => {
     openModalCard.style.visibility = "visible";
     modaFormWrapper.style.visibility = "visible";
-    modaFormWrapper.style.display ="block";
+    modaFormWrapper.style.display = "block";
     modalFormNortification.style.display = "none";
     openModalCard.style.display = "flex";
+    makeModalListVisible.style.zIndex = 39;
 })
 
 closeModalCard.addEventListener("click", () => {
     openModalCard.style.visibility = "hidden";
     modalFormNortification.style.visibility = "hidden";
-    modaFormWrapper.style.display ="none";
+    modaFormWrapper.style.display = "none";
 })
 
 const addTheSameItem = (foundItemTemplate, idShopButton) => {
@@ -231,12 +239,13 @@ const addTheSameItem = (foundItemTemplate, idShopButton) => {
         el.productCode == idShopButton ? el.value += 1 : el
     })
     arrOrderedItems.forEach(el => {
-        if(el.productCode == idShopButton){
-         el.price = foundItemTemplate.price * el.value ;
-        const priceFixed = el.price.toFixed(2).replace(/(<=\.\d{2})\d+/,"").replace(".", ",");
-        price.innerHTML = `$${priceFixed}USD`;
-        input.value = el.value;
+        if (el.productCode == idShopButton) {
+            el.price = foundItemTemplate.price * el.value;
+            const priceFixed = el.price.toFixed(2).replace(/(<=\.\d{2})\d+/, "").replace(".", ",");
+            price.innerHTML = `$${priceFixed}USD`;
+            input.value = el.value;
         }
+        totalFunc(arrOrderedItems)
     })
 
 }
@@ -259,4 +268,10 @@ const addItemToModalCard = () => {
 }
 
 
+madalFormOpacityBackGround.addEventListener("click", (event)=>{
+  if( event.target){
+    openModalCard.style.visibility = "hidden"
+    openModalCard.style.display = "none"
+  }
+})
 addItemToModalCard()

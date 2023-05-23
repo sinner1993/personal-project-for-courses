@@ -11,6 +11,7 @@
     gap: 27px;
     max-width: 1170px;
     padding: 0 0 100px 0;
+    color: w;
 }
 
 .membership__columns__wrapper {
@@ -45,12 +46,13 @@
 
 .membershit__column__button__wrapper {
     margin-top: 38px;
-    background-color: #14a9ee;
+    background-color: red;
     width: 118px;
     margin: auto;
     height: 38px;
     display: grid;
     align-content: center;
+    /* color: white; */
 }
 
 .mebership__price__section {
@@ -59,6 +61,7 @@
 
 .membershit__column__button {
     text-decoration: none;
+    color: white;
 }
 .mebership__price__wrapper {
     display: grid;
@@ -84,4 +87,7 @@
     bottom: -50%;
     left: 46%;
     z-index: 5;
+}
+.membershit__column__button__wrapper:hover{
+    background-color: darkred;
 }

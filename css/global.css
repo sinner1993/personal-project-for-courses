@@ -37,9 +37,10 @@ body {
 
 img {
     display: block;
-    width: 47px;
+    /* width: 47px; */
     /* height: 49px; */
     /* object-fit: cover; */
+    max-width: 220px;
 }
 
 .container {

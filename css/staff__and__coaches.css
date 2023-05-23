@@ -63,4 +63,5 @@ max-height: 278px;
     display: flex;
     align-items: baseline;
     text-align: -webkit-right;
+    justify-content: center;
 }
