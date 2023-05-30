@@ -1,0 +1,121 @@
+.gallery__background__wrapper {
+    background-color: #1581f1;
+    /* margin: 84px 0 0 0; */
+    /* padding: 47px 0; */
+    /* position: relative; */
+    width: 100%;
+    height: 500px;
+    display: flex;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* align-items: baseline; */
+}
+
+.gallery__columns__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* margin: 60px 0; */
+}
+
+.gallery__h2 {
+    font-size: 42px;
+    margin-bottom: 63px;
+    position: relative;
+    text-align: center;
+}
+
+.gallery__h2::after {
+    content: "";
+    display: flex;
+    width: 61px;
+    height: 1px;
+    position: absolute;
+    border-bottom: 1px ridge red;
+    bottom: -52%;
+    left: 27%;
+    z-index: 5;
+}
+
+.gallery__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* position: absolute; */
+    width: 100%;
+}
+
+.wrapper__for__carousel {
+    display: flex;
+    /* position: absolute; */
+    /* overflow: hidden; */
+    margin: 0 10%;
+    /* justify-content: center; */
+    width: 100%;
+    /* min-width: 100%; */
+    /* width: 100%; */
+    /* top: -66px; */
+    /* justify-content: center; */
+    width:  );
+    /* overflow: hidden; */
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.gallery__header__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 203px;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+}
+.gallery__left__button{
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    z-index: 75;
+    color: red;
+    font-size: 40px;
+}
+.gallery__right__button{
+    position: absolute;
+    right: 13%;
+    top: 50%;
+    z-index: 75;
+    color: red;
+    font-size: 40px;
+}
+.gallery__left__button :hover, .gallery__right__button :hover{
+    color:green;
+    cursor: pointer;
+}
+.gallery__carousel__wrapper{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.gallery__img__wrapper{
+    transition:  300ms ease-in-out;
+    /* min-width: 33.99%; */
+    /* position: absolute; */
+    /* z-index: 72; */
+    height: 300px;
+    min-width: 33.9%;
+    /* left: 300px; */
+    width: 100%;
+    /* max-width: 33%; */
+    overflow: hidden;
+}
+
+
+
+
+

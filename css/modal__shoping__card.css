@@ -19,7 +19,6 @@
     background-color: white;
     opacity: 1.0;
     overflow: visible;
-    width: 450px;
     /* height: 400px; */
     display: flex;
     justify-content: center;
@@ -27,7 +26,8 @@
     /* visibility: hidden; */
     /* height: 100%; */
     /* padding-top: 126px; */
-    margin-top: 79px;
+    margin-top: 200px;
+    /* padding-top: 50px; */
 }
 
 .modal__back__ground__opacity {
