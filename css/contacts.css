@@ -1,0 +1,59 @@
+.contacts{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin: 10% 10%;
+}
+.contacts__header__wrapper{
+    display: flex;
+    justify-content: start;
+    margin: 10px 0 53px 0;
+}
+.contacts__h2{
+    font-size: 42px;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 46px;
+    text-align: start;
+}
+.contacts__h2::after {
+    content: "";
+    display: flex;
+    width: 61px;
+    height: 1px;
+    position: absolute;
+    border-bottom: 1px ridge red;
+    bottom: -47%;
+    left: 34%;
+    z-index: 5;
+}
+.contacts__adress__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+}
+.contacs__adress__wrapper, .contacs__adress__hours, .contacs__adress__contacts {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    text-align: start;
+    justify-content: start;
+    width: 100%;
+}
+.contacs__adress__wrapper__h2{
+    width: 25%;
+}
+.contacs__adress__wrapper__p, .contacs__adress__wrapper__p__mail{
+    width: 60%;
+}
+.contacs__adress__wrapper__tel, .contacs__adress__wrapper__email{
+    color: red;
+    text-decoration: none;
+}
+.contacs__adress__wrapper__tel:hover, .contacs__adress__wrapper__email:hover {
+    text-decoration:underline;
+    cursor: pointer;
+}

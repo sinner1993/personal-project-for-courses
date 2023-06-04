@@ -64,6 +64,7 @@
 .shop__column__price {
     font-size: 20px;
     margin-top: 20px;
+    color: red;
 }
 
 .shop__column__button {
@@ -83,4 +84,21 @@
 
 .column__img__wrapper {
     min-width: 163px;
+}
+.go__to__shop{
+    
+height: 40px;
+    
+width: 142px;
+    
+color: blue;
+    
+border: 2px solid blue;
+    
+transition: 300ms ease-in-out;
+}
+.go__to__shop:hover{
+    background-color: blue;
+    cursor: pointer;
+    color: white;
 }
