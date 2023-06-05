@@ -96,8 +96,13 @@
     height: 300px;
     min-width: calc(100% / 3);
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; 
+    transition: transform 200s ease-in-out;
 }
+.slider__contaienr{
+    display: flex;
+}
+
 
 
 
